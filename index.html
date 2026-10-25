@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVALO | Reciclaje, Valor y Evolución</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0c10;
+            --card-bg: #12161f;
+            --accent-green: #00e676;
+            --accent-blue: #00e5ff;
+            --text-main: #f0f4f8;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        .hero-section {
+            padding: 80px 0 60px;
+            background: radial-gradient(circle at top, rgba(0, 230, 118, 0.08) 0%, rgba(10, 12, 16, 1) 70%);
+        }
+        .brand-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #ffffff 0%, var(--accent-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-green);
+            box-shadow: 0 12px 30px rgba(0, 230, 118, 0.15);
+        }
+        .btn-custom {
+            background-color: var(--accent-green);
+            color: #000;
+            font-weight: 700;
+            border-radius: 8px;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            transition: opacity 0.2s ease;
+        }
+        .btn-custom:hover {
+            opacity: 0.9;
+            color: #000;
+        }
+        .btn-ws {
+            background-color: #25d366;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 8px;
+            padding: 12px 24px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-ws:hover { color: #fff; opacity: 0.9; }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="brand-title mb-2">REVALO</h1>
+            <p class="lead text-uppercase tracking-wide text-success mb-3">Reciclaje • Valor • Evolución</p>
+            <p class="col-lg-8 mx-auto text-muted mb-4">
+                Ecosistema de diseño e ingeniería dedicado al supra-reciclaje (upcycling) de alta gama. Transformamos polímeros post-industriales y materiales en desuso en soluciones modulares de alto valor.
+            </p>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <div class="row g-4">
+            <!-- Lumenex Aura -->
+            <div class="col-md-6 col-lg-3">
+                <div class="product-card p-4">
+                    <h3 class="h4 fw-bold mb-2">Lumenex Aura</h3>
+                    <p class="text-muted small">Mesas de Luz Abisal e Infinita</p>
+                    <ul class="text-muted small mb-4 flex-grow-1">
+                        <li>Dimensiones: 50x50x37 cm</li>
+                        <li>Estructura de polímero negro</li>
+                        <li>Iluminación LED dual con efecto abismal</li>
+                    </ul>
+                    <a href="./lumenex-aura/" class="btn-custom text-center">Ver Ficha Técnica</a>
+                </div>
+            </div>
+
+            <!-- Lumenex Colgante -->
+            <div class="col-md-6 col-lg-3">
+                <div class="product-card p-4">
+                    <h3 class="h4 fw-bold mb-2">Lumenex Colgante</h3>
+                    <p class="text-muted small">Luminarias Flotantes Modulares</p>
+                    <ul class="text-muted small mb-4 flex-grow-1">
+                        <li>Módulo 50x50x5 cm</li>
+                        <li>Grilla hexagonal de alta densidad</li>
+                        <li>Doble marco para cielorraso</li>
+                    </ul>
+                    <a href="./lumenex-colgantes/" class="btn-custom text-center">Ver Ficha Técnica</a>
+                </div>
+            </div>
+
+            <!-- Repisas Modulares -->
+            <div class="col-md-6 col-lg-3">
+                <div class="product-card p-4">
+                    <h3 class="h4 fw-bold mb-2">Repisas Modulares</h3>
+                    <p class="text-muted small">Mobiliario Flex Acordionado</p>
+                    <ul class="text-muted small mb-4 flex-grow-1">
+                        <li>Estructura textil/polímero expansible</li>
+                        <li>Uniones de plástico reciclado blanco</li>
+                        <li>Frentes en madera contrachapada</li>
+                    </ul>
+                    <a href="./repisas-modulares/" class="btn-custom text-center">Ver Ficha Técnica</a>
+                </div>
+            </div>
+
+            <!-- Sistema Constructivo -->
+            <div class="col-md-6 col-lg-3">
+                <div class="product-card p-4">
+                    <h3 class="h4 fw-bold mb-2">Sistema Constructivo</h3>
+                    <p class="text-muted small">Paneles Autoportantes Secos</p>
+                    <ul class="text-muted small mb-4 flex-grow-1">
+                        <li>Basado en bastidores V-Bank reciclados</li>
+                        <li>Núcleo acanalado de alta rigidez</li>
+                        <li>Fijación mediante tiranfondos</li>
+                    </ul>
+                    <a href="./sistema-constructivo/" class="btn-custom text-center">Ver Ficha Técnica</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-5 border-top border-secondary">
+        <div class="container">
+            <h4 class="fw-bold mb-3">Contacto Oficial REVALO</h4>
+            <p class="text-muted mb-4">Bragado, Buenos Aires, Argentina</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="https://wa.me/5492342491367?text=Hola%20REVALO,%20quisiera%20consultar%20por%20sus%20productos" target="_blank" class="btn-ws">
+                    <i class="fab fa-whatsapp me-2"></i> WhatsApp Directo
+                </a>
+                <a href="mailto:revalooficial@gmail.com" class="btn btn-outline-light">
+                    <i class="far fa-envelope me-2"></i> revalooficial@gmail.com
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
