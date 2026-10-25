@@ -1,6 +1,3 @@
-revalo
- REVALO | Reciclaje, Valor y Evolución. Ecosistema digital de supra-reciclaje (upcycling) de alta gama, iluminación modular y sistemas constructivos circulares.
- 
 # REVALO — Reciclaje, Valor y Evolución ♻️
 
 **REVALO** es un ecosistema de diseño, ingeniería y fabricación dedicado al **supra-reciclaje (upcycling) de alta gama**. Transformamos polímeros post-industriales, textiles técnicos y componentes en desuso en soluciones modulares de alto impacto estético, funcional y ambiental.
