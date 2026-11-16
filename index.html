@@ -8,13 +8,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #0a0c10;
-            --card-bg: #12161f;
-            --accent-green: #00e676;
-            --accent-blue: #00e5ff;
-            --text-main: #f0f4f8;
+            --bg-dark: #0d0f12;
+            --card-bg: #16191f;
+            --accent-green: #10b981;
+            --accent-amber: #f59e0b;
+            --accent-orange: #ea580c;
+            --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --border-color: #1e293b;
+            --border-color: #262b34;
         }
         body {
             background-color: var(--bg-dark);
@@ -23,20 +24,33 @@
         }
         .hero-section {
             padding: 80px 0 60px;
-            background: radial-gradient(circle at top, rgba(0, 230, 118, 0.08) 0%, rgba(10, 12, 16, 1) 70%);
+            background: radial-gradient(circle at top, rgba(245, 158, 11, 0.14) 0%, rgba(16, 185, 129, 0.06) 45%, rgba(13, 15, 18, 1) 80%);
+            border-bottom: 1px solid var(--border-color);
         }
         .brand-title {
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             font-weight: 800;
-            letter-spacing: 2px;
-            background: linear-gradient(135deg, #ffffff 0%, var(--accent-green) 100%);
+            letter-spacing: 3px;
+            background: linear-gradient(135deg, #ffffff 15%, var(--accent-amber) 65%, var(--accent-green) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+        .tagline-pill {
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 50px;
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            color: var(--accent-amber);
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
         }
         .product-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 16px;
+            overflow: hidden;
             transition: all 0.3s ease;
             height: 100%;
             display: flex;
@@ -44,22 +58,52 @@
         }
         .product-card:hover {
             transform: translateY(-6px);
-            border-color: var(--accent-green);
-            box-shadow: 0 12px 30px rgba(0, 230, 118, 0.15);
+            border-color: var(--accent-amber);
+            box-shadow: 0 12px 30px rgba(245, 158, 11, 0.16);
+        }
+        .card-img-wrap {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            background: #0a0c0e;
+        }
+        .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .product-card:hover .card-img-wrap img {
+            transform: scale(1.05);
+        }
+        .badge-category {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(13, 15, 18, 0.85);
+            border: 1px solid var(--accent-amber);
+            color: var(--accent-amber);
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            text-transform: uppercase;
         }
         .btn-custom {
-            background-color: var(--accent-green);
-            color: #000;
+            background: linear-gradient(135deg, var(--accent-amber), var(--accent-orange));
+            color: #fff;
             font-weight: 700;
             border-radius: 8px;
             padding: 10px 20px;
             text-decoration: none;
             display: inline-block;
-            transition: opacity 0.2s ease;
+            transition: all 0.2s ease;
+            border: none;
         }
         .btn-custom:hover {
-            opacity: 0.9;
-            color: #000;
+            opacity: 0.92;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(234, 88, 12, 0.4);
         }
         .btn-ws {
             background-color: #25d366;
@@ -77,83 +121,129 @@
 
     <section class="hero-section text-center">
         <div class="container">
-            <h1 class="brand-title mb-2">REVALO</h1>
-            <p class="lead text-uppercase tracking-wide text-success mb-3">Reciclaje • Valor • Evolución</p>
-            <p class="col-lg-8 mx-auto text-muted mb-4">
-                Ecosistema de diseño e ingeniería dedicado al supra-reciclaje (upcycling) de alta gama. Transformamos polímeros post-industriales y materiales en desuso en soluciones modulares de alto valor.
+            <div class="tagline-pill mb-3">RECICLAJE • VALOR • EVOLUCIÓN</div>
+            <h1 class="brand-title mb-3">REVALO</h1>
+            <p class="col-lg-8 mx-auto text-light opacity-75 fs-5 mb-4">
+                Ecosistema de diseño, ingeniería y fabricación dedicado al supra-reciclaje (upcycling) de alta gama. Transformamos polímeros, aluminio y materiales técnicos en soluciones modulares con identidad propia.
             </p>
         </div>
     </section>
 
     <div class="container my-5">
-        <div class="row g-4">
-            <!-- Lumenex Aura -->
-            <div class="col-md-6 col-lg-3">
-                <div class="product-card p-4">
-                    <h3 class="h4 fw-bold mb-2">Lumenex Aura</h3>
-                    <p class="text-muted small">Mesas de Luz Abisal e Infinita</p>
-                    <ul class="text-muted small mb-4 flex-grow-1">
-                        <li>Dimensiones: 50x50x37 cm</li>
-                        <li>Estructura de polímero negro</li>
-                        <li>Iluminación LED dual con efecto abismal</li>
-                    </ul>
-                    <a href="./lumenex-aura/" class="btn-custom text-center">Ver Ficha Técnica</a>
+        <div class="row g-4 justify-content-center">
+            
+            <!-- 1. Lumenex Colgante -->
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card">
+                    <div class="card-img-wrap">
+                        <span class="badge-category">Iluminación</span>
+                        <img src="./img/lumenex-halo-negro.jpg" alt="Lumenex Colgante">
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h3 class="h4 fw-bold mb-1">Lumenex Colgante</h3>
+                        <p class="text-warning small mb-3">Luminarias Flotantes Modulares</p>
+                        <ul class="text-muted small mb-4 flex-grow-1">
+                            <li>Línea AIR (luz cálida/fría) y Línea Industrial 4 Spots</li>
+                            <li>Grilla hexagonal de alta densidad (50x50x5 cm)</li>
+                            <li>Tensores de acero inoxidable y marco ultra liviano</li>
+                        </ul>
+                        <a href="./lumenex-colgantes/" class="btn-custom text-center">Explorar Línea Lumenex</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Lumenex Colgante -->
-            <div class="col-md-6 col-lg-3">
-                <div class="product-card p-4">
-                    <h3 class="h4 fw-bold mb-2">Lumenex Colgante</h3>
-                    <p class="text-muted small">Luminarias Flotantes Modulares</p>
-                    <ul class="text-muted small mb-4 flex-grow-1">
-                        <li>Módulo 50x50x5 cm</li>
-                        <li>Grilla hexagonal de alta densidad</li>
-                        <li>Doble marco para cielorraso</li>
-                    </ul>
-                    <a href="./lumenex-colgantes/" class="btn-custom text-center">Ver Ficha Técnica</a>
+            <!-- 2. Lumenex Aura (Mesas y Cuadros Infinitos) -->
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card">
+                    <div class="card-img-wrap">
+                        <span class="badge-category">Luz Infinita</span>
+                        <img src="./img/cuadro-luz-infinita.png" alt="Lumenex Aura Mesas y Cuadros">
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h3 class="h4 fw-bold mb-1">Lumenex Aura</h3>
+                        <p class="text-warning small mb-3">Mesas Abisales & Cuadros Infinitos</p>
+                        <ul class="text-muted small mb-4 flex-grow-1">
+                            <li>Mesas de luz infinita (50x50x37 cm)</li>
+                            <li>Cuadros murales LED hexagonales de profundidad</li>
+                            <li>Óptica de doble espejo y polímeros recuperados</li>
+                        </ul>
+                        <a href="./lumenex-aura/" class="btn-custom text-center">Ver Mesas y Cuadros</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Repisas Modulares -->
-            <div class="col-md-6 col-lg-3">
-                <div class="product-card p-4">
-                    <h3 class="h4 fw-bold mb-2">Repisas Modulares</h3>
-                    <p class="text-muted small">Mobiliario Flex Acordionado</p>
-                    <ul class="text-muted small mb-4 flex-grow-1">
-                        <li>Estructura textil/polímero expansible</li>
-                        <li>Uniones de plástico reciclado blanco</li>
-                        <li>Frentes en madera contrachapada</li>
-                    </ul>
-                    <a href="./repisas-modulares/" class="btn-custom text-center">Ver Ficha Técnica</a>
+            <!-- 3. REVALO MAGNA (Nuevo Producto) -->
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card">
+                    <div class="card-img-wrap">
+                        <span class="badge-category">Nuevo • Hogar & Taller</span>
+                        <img src="./img/revalo-magna-banner.png" alt="REVALO MAGNA">
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h3 class="h4 fw-bold mb-1">REVALO MAGNA</h3>
+                        <p class="text-warning small mb-3">Almacenamiento Modular Imantado</p>
+                        <ul class="text-muted small mb-4 flex-grow-1">
+                            <li>Yerbero, azucarera y especieros en aluminio reciclado</li>
+                            <li>Sistema de sujeción magnética de alta firmeza</li>
+                            <li>Versátil para cocina, taller, hogar y jardín</li>
+                        </ul>
+                        <a href="./revalo-magna/" class="btn-custom text-center">Ver Línea Magna</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Sistema Constructivo -->
-            <div class="col-md-6 col-lg-3">
-                <div class="product-card p-4">
-                    <h3 class="h4 fw-bold mb-2">Sistema Constructivo</h3>
-                    <p class="text-muted small">Paneles Autoportantes Secos</p>
-                    <ul class="text-muted small mb-4 flex-grow-1">
-                        <li>Basado en bastidores V-Bank reciclados</li>
-                        <li>Núcleo acanalado de alta rigidez</li>
-                        <li>Fijación mediante tiranfondos</li>
-                    </ul>
-                    <a href="./sistema-constructivo/" class="btn-custom text-center">Ver Ficha Técnica</a>
+            <!-- 4. Repisas Modulares -->
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card">
+                    <div class="card-img-wrap">
+                        <span class="badge-category">Mobiliario</span>
+                        <img src="./img/estanteria-negra.png" alt="Repisas Modulares">
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h3 class="h4 fw-bold mb-1">Repisas Modulares</h3>
+                        <p class="text-warning small mb-3">Estanterías & Sistemas Flex</p>
+                        <ul class="text-muted small mb-4 flex-grow-1">
+                            <li>Estanterías de diseño geométrico y estructura negra</li>
+                            <li>Sistemas plegables y expansibles de bajo volumen</li>
+                            <li>Materiales reciclados de alta resistencia</li>
+                        </ul>
+                        <a href="./repisas-modulares/" class="btn-custom text-center">Ver Ficha Técnica</a>
+                    </div>
                 </div>
             </div>
+
+            <!-- 5. Sistema Constructivo -->
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card">
+                    <div class="card-img-wrap" style="background: linear-gradient(135deg, #1f242d, #12151a); display:flex; align-items:center; justify-content:center;">
+                        <span class="badge-category">Arquitectura</span>
+                        <i class="fas fa-layer-group fa-4x text-success opacity-50"></i>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h3 class="h4 fw-bold mb-1">Sistema Constructivo</h3>
+                        <p class="text-warning small mb-3">Paneles Autoportantes Secos</p>
+                        <ul class="text-muted small mb-4 flex-grow-1">
+                            <li>Basado en bastidores V-Bank industriales reciclados</li>
+                            <li>Núcleo acanalado de aislamiento termo-acústico</li>
+                            <li>Ensamble limpio y rápido mediante tiranfondos</li>
+                        </ul>
+                        <a href="./sistema-constructivo/" class="btn-custom text-center">Ver Ficha Técnica</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <footer class="text-center py-5 border-top border-secondary">
+    <footer class="text-center py-5 border-top border-secondary mt-5" style="background: #0a0c0e;">
         <div class="container">
-            <h4 class="fw-bold mb-3">Contacto Oficial REVALO</h4>
+            <h4 class="fw-bold mb-2">Contacto Oficial <span style="color: var(--accent-amber);">REVALO</span></h4>
             <p class="text-muted mb-4">Bragado, Buenos Aires, Argentina</p>
             <div class="d-flex justify-content-center gap-3 flex-wrap">
                 <a href="https://wa.me/5492342491367?text=Hola%20REVALO,%20quisiera%20consultar%20por%20sus%20productos" target="_blank" class="btn-ws">
                     <i class="fab fa-whatsapp me-2"></i> WhatsApp Directo
                 </a>
-                <a href="mailto:revalooficial@gmail.com" class="btn btn-outline-light">
+                <a href="mailto:revalooficial@gmail.com" class="btn btn-outline-warning">
                     <i class="far fa-envelope me-2"></i> revalooficial@gmail.com
                 </a>
             </div>
